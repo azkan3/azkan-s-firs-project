@@ -1,0 +1,19 @@
+{
+  "name": "RC SOP Library",
+  "short_name": "RC SOP",
+  "description": "Library digital untuk membaca dan mengelola catatan SOP.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101114",
+  "theme_color": "#101114",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

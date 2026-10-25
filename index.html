@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#101114">
+
+    <title>RC SOP | SOP Library</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">RC</div>
+
+            <div>
+                <h1>RC <span>SOP</span></h1>
+                <p>WORKSPACE & SOP LIBRARY</p>
+            </div>
+        </div>
+
+        <div class="save-status" id="saveStatus">
+            All changes saved
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="eyebrow">YOUR WORKSPACE</p>
+
+            <h2>
+                Semua SOP.<br>
+                <span>Satu tempat.</span>
+            </h2>
+
+            <p class="hero-description">
+                Baca, kelola, dan perbarui catatan SOP
+                dengan lebih praktis.
+            </p>
+        </section>
+
+        <section class="toolbar">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Cari judul atau isi SOP..."
+                aria-label="Cari SOP"
+            >
+
+            <button id="addSopBtn" class="primary-btn">
+                + Tambah SOP
+            </button>
+
+        </section>
+
+        <section class="library">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">LIBRARY</p>
+                    <h2>Daftar SOP</h2>
+                </div>
+
+                <span id="sopCount">0 SOP</span>
+            </div>
+
+            <div id="sopList" class="sop-list"></div>
+
+            <div id="emptyState" class="empty-state">
+                <h3>Belum ada SOP</h3>
+
+                <p>
+                    Tambahkan SOP pertama untuk mulai
+                    membangun library kamu.
+                </p>
+
+                <button id="emptyAddBtn" class="primary-btn">
+                    + Tambah SOP pertama
+                </button>
+            </div>
+
+        </section>
+
+        <section class="editor" id="editor">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">EDITOR</p>
+                    <h2 id="editorHeading">Tambah SOP</h2>
+                </div>
+            </div>
+
+            <form id="sopForm">
+
+                <label for="sopTitle">
+                    Judul SOP
+                </label>
+
+                <input
+                    id="sopTitle"
+                    type="text"
+                    placeholder="Contoh: Budaya Kerja DQSC"
+                    required
+                >
+
+                <label for="sopCategory">
+                    Kategori
+                </label>
+
+                <select id="sopCategory">
+                    <option value="Budaya Kerja">Budaya Kerja</option>
+                    <option value="Persiapan Outlet">Persiapan Outlet</option>
+                    <option value="Produk & Dapur">Produk & Dapur</option>
+                    <option value="Pelayanan">Pelayanan</option>
+                    <option value="Kebersihan">Kebersihan</option>
+                    <option value="Penutupan Outlet">Penutupan Outlet</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+
+                <label for="sopContent">
+                    Isi lengkap SOP
+                </label>
+
+                <textarea
+                    id="sopContent"
+                    rows="12"
+                    placeholder="Tulis atau tempel isi SOP di sini..."
+                    required
+                ></textarea>
+
+                <p class="editor-hint">
+                    Perubahan akan disimpan otomatis di perangkat ini.
+                </p>
+
+                <div class="editor-actions">
+                    <button type="submit" class="primary-btn">
+                        Simpan SOP
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelEditBtn"
+                        class="secondary-btn"
+                    >
+                        Batal
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
